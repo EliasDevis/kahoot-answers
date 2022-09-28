@@ -4,7 +4,8 @@
   "description": "Get answers to kahoot test",
   "main": "src/index.js",
   "scripts": {
-    "dev": "nodemon ."
+    "dev": "nodemon .",
+    "start": "node ."
   },
   "keywords": [],
   "author": "Elias",
