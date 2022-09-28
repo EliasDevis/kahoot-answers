@@ -1,0 +1,42 @@
+<%{ './base.ejs' }%> <%{ content %>
+<div class="container">
+    <a href="/" class="back">Back</a>
+    <h1 class="title"><%= title %></h1>
+
+    <details class="info-details">
+        <summary>Info</summary>
+
+        <div class="info">
+            <div class="pin">Pin: <%= pin %></div>
+            <div class="id">Id: <%= challengeId %></div>
+            <div class="created">Created: <%= startTime %></div>
+            <div class="ending">Ending: <%= endTime %></div>
+            <!-- <div class="author">Author: myaccfortask</div> -->
+            <!-- <div class="public">Public: Yes</div> -->
+            <div class="randomize">
+                Randomize answers: <%= randomizeAnswers %>
+            </div>
+        </div>
+    </details>
+
+    <div class="questions">
+        <% questions.forEach(question => { %>
+        <div class="question">
+            <div class="question-info">
+                <div class="text"><%= question.question %></div>
+                <div class="time"><%= question.time / 1000 %></div>
+            </div>
+            <div class="answers">
+                <% question.answers.forEach(answer => { %>
+                <div class="answer <%= answer.correct ? 'correct' : '' %>">
+                    <%= answer.answer %>
+                </div>
+
+                <% }) %>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+</div>
+
+<%} %> <%{ css %>game<%} %>

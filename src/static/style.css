@@ -1,0 +1,35 @@
+body,
+html {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    min-height: 100vh;
+    background-color: #46178f;
+    --white: #fff;
+}
+
+* {
+    font: inherit;
+    box-sizing: border-box;
+}
+
+button {
+    appearance: none;
+    background: none;
+    border: none;
+    font: inherit;
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}

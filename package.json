@@ -1,0 +1,20 @@
+{
+  "name": "kahoot-answers",
+  "version": "1.0.0",
+  "description": "Get answers to kahoot test",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon ."
+  },
+  "keywords": [],
+  "author": "Elias",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "express": "^4.18.1",
+    "pejs": "^0.6.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
