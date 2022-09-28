@@ -8,7 +8,13 @@
 
         <div class="info">
             <div class="pin">Pin: <%= pin %></div>
-            <div class="id">Id: <%= challengeId %></div>
+            <div class="id">
+                Creator:
+                <a href="https://create.kahoot.it/profiles/<%= challengeId %>"
+                    >Link</a
+                ><%= challengeId %>
+            </div>
+            <div class="id">Challenge id: <%= challengeId %></div>
             <div class="created">Created: <%= startTime %></div>
             <div class="ending">Ending: <%= endTime %></div>
             <!-- <div class="author">Author: myaccfortask</div> -->

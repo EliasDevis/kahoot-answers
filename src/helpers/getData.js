@@ -2,25 +2,23 @@ const axios = require("axios").default;
 const URLS = require("../consts").URLS;
 
 module.exports = async (idOrPin, isPin) => {
-    const url = isPin ? URLS.pin.replace('{pin}', idOrPin) : URLS.answers.replace('{id}', idOrPin)
+    const url = URLS.pin.replace('{}', idOrPin) 
 
     const data = await axios
         .get(url)
-        .then((res) => console.log(res.data))
+        .then((res) => res.data)
         .catch(err => {
             if (err.response.data.error === 'NOT_FOUND') throw new Error('Pin is wrong')
         });
 
-    // console.log(data)
-
-
     return {
         pin: data.challenge.pin,
-        challengeId: data.challenge.challengeId,
+        fullChallengeId: data.challenge.challengeId,
+        challengeId: data.challenge.quizId,
         startTime: data.challenge.startTime,
         endTime: data.challenge.endTime,
         randomizeAnswers: data.challenge.game_options.randomize_answers,
-        title: (isPin ? data.challenge.title : data.challenge.kahoot.title),
+        title: (isPin ? data.challenge : data.challenge.kahoot).title,
         questions: (isPin ? data.kahoot : data.challenge.kahoot).questions.map((question) => {
             return {
                 question: question.question,

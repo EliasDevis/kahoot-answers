@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 
 app.get('/game', async (req, res) => {
     const pinOrId = req.query.id
-    const isPin = pinOrId.match(/[0-9]{8}/)
+    const isPin = /^[0-9]{8}$/.test(pinOrId)
     const data = await getData(pinOrId, isPin).catch(err => console.log(err))
 
     if (data === undefined) return res.status(300).send('Something worng')
