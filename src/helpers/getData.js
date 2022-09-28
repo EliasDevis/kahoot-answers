@@ -6,10 +6,12 @@ module.exports = async (idOrPin, isPin) => {
 
     const data = await axios
         .get(url)
-        .then((res) => res.data)
+        .then((res) => console.log(res.data))
         .catch(err => {
             if (err.response.data.error === 'NOT_FOUND') throw new Error('Pin is wrong')
         });
+
+    // console.log(data)
 
 
     return {

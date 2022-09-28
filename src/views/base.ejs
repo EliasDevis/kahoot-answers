@@ -13,10 +13,16 @@
         />
         <link rel="stylesheet" href="/static/style.css" />
         <link rel="stylesheet" href="/static/<%{{ css }}%>.css" />
-        <link rel="shortcut icon" href="/static/logo.svg" type="image/x-icon" />
+        <link
+            rel="shortcut icon"
+            href="/static/images/logo.svg"
+            type="image/svg+xml"
+        />
+        <script src="/static/js/<%{{ js }}%>.js" defer></script>
         <title>Kahoot Answers</title>
     </head>
     <body>
         <%{{ content }}%>
+        <footer>Made with love</footer>
     </body>
 </html>

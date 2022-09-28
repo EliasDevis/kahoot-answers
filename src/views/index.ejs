@@ -2,9 +2,15 @@
 <div class="rect"></div>
 <div class="circle"></div>
 <img class="logo" src="static/images/logo.svg" alt="" />
-<form class="enter-id" action="/game">
-    <input type="text" placeholder="Enter id" class="input" name="id" />
+<div class="enter-id" id="block">
+    <input
+        type="text"
+        placeholder="Enter pin or id"
+        class="input"
+        name="id"
+        pattern="^(([0-9]{8})|([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}_\d{13}))$"
+        required
+    />
     <button type="submit" class="enter">Enter</button>
-</form>
-
-<%} %> <%{ css %>home<%} %>
+</div>
+<%} %> <%{ css %>home<%} %> <%{ js %>home<%} %>

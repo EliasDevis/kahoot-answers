@@ -3,6 +3,7 @@
     margin: 0 auto;
     position: relative;
     margin-top: 32px;
+    height: 100%;
 }
 
 @media (max-width: 1024px) {
@@ -19,6 +20,12 @@
     border-radius: 4px;
     box-shadow: #00000040 0px -4px inset;
     background-color: #2f2f2f;
+}
+
+.back:hover {
+    box-shadow: #00000040 0px -2px inset;
+    padding-top: 6px;
+    top: 2px;
 }
 
 .title {

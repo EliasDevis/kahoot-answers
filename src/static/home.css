@@ -30,6 +30,27 @@ body {
     height: 48px;
 }
 
+.input.error {
+    border-color: red;
+}
+
+.input.error-anim {
+    animation: vibro 0.5s linear;
+    border-color: red;
+}
+
+@keyframes vibro {
+    25% {
+        transform: translateX(4px);
+    }
+    50% {
+        transform: translateX(-4px);
+    }
+    75% {
+        transform: translateX(4px);
+    }
+}
+
 .enter {
     height: 48px;
     background-color: #2f2f2f;
@@ -41,10 +62,15 @@ body {
     cursor: pointer;
 }
 
-.enter:hover {
+.enter:not(:disabled):hover {
     height: 46px;
     box-shadow: #00000040 0px -2px inset;
     margin-top: 2px;
+}
+
+.enter:disabled {
+    opacity: 0.2;
+    cursor: default;
 }
 
 .logo {
