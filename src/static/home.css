@@ -5,6 +5,8 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    width: 100vw;
+    height: 100vh;
 }
 
 .enter-id {
@@ -26,8 +28,12 @@ body {
     font-weight: 700;
     text-align: center;
     border: 2px solid #cccccc;
-    padding: 4px 0;
+    padding: 4px 8px;
     height: 48px;
+}
+
+.input:focus {
+    border-color: black;
 }
 
 .input.error {
