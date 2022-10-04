@@ -1,5 +1,5 @@
-import Challenges from "./challengeService.js";
-import formatAllDates from "./formatDate.js";
+// import Challenges from "./challengeService.js";
+// import formatAllDates from "./formatDate.js";
 
 const tabs = document.querySelectorAll('.header__tab');
 const activeClassname = 'header__tab_active';
