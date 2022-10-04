@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>http://khanswers.vercel.app/</loc>
+        <lastmod>2022-01-01</lastmod>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://khanswers.vercel.app/game?id=11111111</loc>
+        <lastmod>2004-12-23T18:00:15+00:00</lastmod>
+        <priority>0.1</priority>
+    </url>
+</urlset>
