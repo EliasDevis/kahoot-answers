@@ -33,5 +33,5 @@ Created: 1664805379662
  * https://kahoot.it/rest/challenges/pin/04442638
 
 ## Scripts ##
-Run: `yarn start`
+Run: `yarn start`  
 Develop: `yarn dev`

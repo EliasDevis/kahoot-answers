@@ -10,5 +10,8 @@
             "src": "/(.*)",
             "dest": "src/index.js"
         }
-    ]
+    ],
+    "github": {
+        "silent": true
+    }
 }
