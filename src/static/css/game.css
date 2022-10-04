@@ -1,0 +1,252 @@
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 32px;
+    height: 100%;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 20px;
+    }
+}
+
+.back {
+    padding: 8px 16px;
+    background-color: #00000066;
+    color: var(--white);
+    /* position: absolute; */
+    border-radius: 4px;
+    box-shadow: #00000040 0px -4px inset;
+    background-color: #2f2f2f;
+    /* display: none; */
+}
+
+.back:hover {
+    box-shadow: #00000040 0px -2px inset;
+    padding-top: 6px;
+    top: 2px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--white);
+    border-radius: 10px;
+    align-items: center;
+    padding: 0 8px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .header {
+        justify-content: center;
+        padding-top: 4px;
+    }
+
+    .header__title {
+        text-align: center;
+        margin: auto;
+    }
+}
+
+.header__title {
+    font-weight: 700;
+    font-size: 24px;
+    padding-left: 20px;
+    margin-right: auto;
+    word-break: break-all;
+}
+
+.header__tabs {
+    display: flex;
+    justify-content: center;
+}
+
+.header__tab {
+    padding: 12px;
+    display: grid;
+    place-items: center;
+    color: #373737;
+    font-weight: 600;
+    font-size: 18px;
+    position: relative;
+    flex-basis: 100px;
+}
+
+.header__tab_active::after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    display: block;
+    height: 3px;
+    background-color: purple;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    bottom: 0;
+}
+
+.info:not(:target),
+.questions:not(:target),
+.users:not(:target) {
+    display: none;
+}
+
+.info {
+    margin-top: 24px;
+}
+
+.info__image {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+}
+
+.info__text {
+    background-color: var(--white);
+    padding: 16px;
+    margin-top: 12px;
+    border-radius: 8px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.questions {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.question {
+    display: flex;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    gap: 24px;
+    background-color: var(--white);
+    padding: 16px;
+    border-radius: 4px;
+    flex-wrap: wrap;
+}
+
+.question__info {
+    flex: 1 1 0;
+}
+
+.question__text {
+    font-size: 24px;
+    font-weight: 500;
+    word-break: break-all;
+    min-width: 124px;
+}
+
+.question__time {
+    margin-top: 8px;
+    background-color: #000000d3;
+    padding: 4px 8px;
+    display: inline-block;
+    color: var(--white);
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.question__banner {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    margin-bottom: 4px;
+    border-radius: 4px;
+}
+
+.question__time::after {
+    content: ' sec';
+}
+
+.question__answers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px;
+    flex: 1.5 1 0;
+}
+
+.answer {
+    background-color: #eb2f4e;
+    display: grid;
+    place-items: center;
+    box-shadow: #00000040 0px -4px inset;
+    border-radius: 4px;
+    width: 100%;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 20px;
+    position: relative;
+    min-width: 140px;
+    padding: 8px;
+    min-height: 52px;
+    cursor: pointer;
+    word-break: break-all;
+}
+
+.answer::after {
+    content: '✖';
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+}
+
+.answer.correct {
+    background-color: #66bf39;
+}
+
+.answer.correct::after {
+    content: '✔';
+}
+
+.answer__image {
+    width: 100%;
+}
+
+.users {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 4px;
+    margin-top: 24px;
+    /* padding: 8px; */
+}
+
+.users th {
+    padding-bottom: 8px;
+    padding-top: 8px;
+    font-weight: 600;
+    text-align-last: left;
+    border-bottom: 1px solid #8d8d8d;
+}
+
+.users th:first-child {
+    padding-left: 8px;
+    padding-top: 8px;
+}
+
+.users tr {
+    font-weight: 500;
+    color: #333;
+}
+
+.users tbody tr {
+    cursor: pointer;
+}
+
+.users tbody td {
+    padding: 8px 0;
+}
+
+.users tbody td:first-child {
+    padding-left: 8px;
+}

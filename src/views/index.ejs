@@ -5,10 +5,10 @@
 <div class="enter-id" id="block">
     <input
         type="text"
-        placeholder="Enter pin or id"
+        placeholder="Enter link, pin or id"
         class="input"
         name="id"
-        pattern="^(([0-9]{8})|([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}_\d{13}))$"
+        pattern="^(([0-9]{8})|([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}_\d{13})|(((http|https):\/\/)?kahoot.it\/challenge\/\d{8}(\?challenge-id=[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}_\d{13,})?)|(((http|https):\/\/)?kahoot.it\/challenge\/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}_\d{13,}))$"
         required
     />
     <button type="submit" class="enter">Enter</button>

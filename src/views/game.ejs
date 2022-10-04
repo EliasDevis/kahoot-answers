@@ -1,41 +1,71 @@
 <%{ './base.ejs' }%> <%{ content %>
 <div class="container">
-    <a href="/" class="back">Back</a>
-    <h1 class="title"><%= title %></h1>
+    <header class="header">
+        <a href="/" class="back">Back</a>
 
-    <details class="info-details">
-        <summary>Info</summary>
+        <h1 class="header__title"><%= title %></h1>
+        <div class="header__tabs">
+            <a href="#info" class="header__tab header__tab_active">Info</a>
+            <a href="#questions" class="header__tab">Questions</a>
+            <a href="#users" class="header__tab">Users</a>
+        </div>
+    </header>
 
-        <div class="info">
-            <div class="pin">Pin: <%= pin %></div>
-            <div class="id">
+    <div class="info" id="info">
+        <% if (coverUrl) { %>
+        <img src="<%= coverUrl %>" alt="" class="info__image" />
+        <% } %>
+
+        <div class="info__text">
+            <div class="info__creator creator">
                 Creator:
-                <a href="https://create.kahoot.it/profiles/<%= challengeId %>"
-                    >Link</a
-                ><%= challengeId %>
+                <a
+                    href="https://create.kahoot.it/profiles/<%= creator.id %> "
+                    class="creator__username"
+                    ><%= creator.username %>
+                </a>
             </div>
-            <div class="id">Challenge id: <%= challengeId %></div>
-            <div class="created">Created: <%= startTime %></div>
-            <div class="ending">Ending: <%= endTime %></div>
-            <!-- <div class="author">Author: myaccfortask</div> -->
-            <!-- <div class="public">Public: Yes</div> -->
-            <div class="randomize">
+            <div class="info__pin">Pin: <%= pin %></div>
+            <div class="info__id">Challenge id: <%= challengeId %></div>
+            <div class="info__id">
+                Url id: <%= challengeId %>_<%= startTime %>
+            </div>
+            <div class="info__created">
+                Created: <%= formatDate(startTime) %>
+            </div>
+            <div class="info__ending">Ending: <%= formatDate(endTime) %></div>
+            <div class="info__randomize">
                 Randomize answers: <%= randomizeAnswers %>
             </div>
         </div>
-    </details>
+    </div>
 
-    <div class="questions">
+    <div class="questions" id="questions">
         <% questions.forEach(question => { %>
         <div class="question">
-            <div class="question-info">
-                <div class="text"><%= question.question %></div>
-                <div class="time"><%= question.time / 1000 %></div>
+            <div class="question__info">
+                <% if (question.imageUrl) { %>
+                <img
+                    src="<%= question.imageUrl %> "
+                    alt=""
+                    class="question__banner"
+                />
+                <% } %>
+
+                <div class="question__text"><%= question.question %></div>
+                <div class="question__time"><%= question.time / 1000 %></div>
             </div>
-            <div class="answers">
+            <div class="question__answers">
                 <% question.answers.forEach(answer => { %>
                 <div class="answer <%= answer.correct ? 'correct' : '' %>">
-                    <%= answer.answer %>
+                    <% if (answer.imageUrl) { %>
+                    <img
+                        class="answer__image"
+                        src="<%= answer.imageUrl %>"
+                        alt=""
+                    />
+                    <% } %> <% if (answer.answer) { %> <%= answer.answer %> <% }
+                    %>
                 </div>
 
                 <% }) %>
@@ -43,6 +73,24 @@
         </div>
         <% }) %>
     </div>
-</div>
 
-<%} %> <%{ css %>game<%} %>
+    <table class="users" id="users" cellspacing="0" cellpadding="0">
+        <!-- <thead>
+            <tr>
+                <th>Name</th>
+                <th>Rank</th>
+                <th>Correct answers</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ilya</td>
+                <td>1</td>
+                <td>24/24</td>
+                <td>10000</td>
+            </tr>
+        </tbody> -->
+    </table>
+</div>
+<%} %> <%{ css %>game<%} %> <%{ title %><%= pin %> <%} %> <%{ js %>game<%} %>
