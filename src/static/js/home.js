@@ -1,5 +1,5 @@
-import formatAllDates from './formatDate.js';
-import Challenges from './challengeService.js';
+// import formatAllDates from './formatDate.js';
+// import Challenges from './challengeService.js';
 
 const block = document.getElementById('block');
 const input = block.querySelector('input');

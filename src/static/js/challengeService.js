@@ -1,4 +1,4 @@
-export default class Challenges {
+class Challenges {
     static getChallenges() {
         if (!localStorage.getItem('challenges'))
             localStorage.setItem('challenges', '[]');
