@@ -31,20 +31,15 @@ app.get('/game', async (req, res) => {
 
     data.then(
         (data) => {
-            res.render('game', {
+            res.render('game', { 
                 ...data,
-                formatDate,
+                formatDate
             });
         },
         (err) => {
             res.status(400).json({ error: `${type} is not found` });
         }
     );
-});
-
-app.get('/sitemap.xml', function (req, res) {
-    res.header('Content-Type', 'application/xml');
-    res.sendFile('src/static/sitemap.xml', { root: '.' });
 });
 
 app.use((req, res, next) => {
