@@ -24,7 +24,8 @@ input.addEventListener('input', (ev) => {
 block.querySelector("button").addEventListener("click", async (ev) => {
     let id = input.value
         .replace(/((http|https):\/\/)?kahoot.it\/challenge\//, '')
-        .replace(/\?challenge-id=[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}_\d{13,}/, '')
+        .replace(/\d{8}\?challenge-id=/, '')
+    console.log(id)
 
     const status = await fetch(`/game?id=${id}`)
         .catch((err) => {

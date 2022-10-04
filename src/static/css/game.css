@@ -16,17 +16,17 @@
     padding: 8px 16px;
     background-color: #00000066;
     color: var(--white);
-    /* position: absolute; */
     border-radius: 4px;
+    position: relative;
     box-shadow: #00000040 0px -4px inset;
     background-color: #2f2f2f;
-    /* display: none; */
+    margin-top: 4px;
 }
 
 .back:hover {
     box-shadow: #00000040 0px -2px inset;
-    padding-top: 6px;
-    top: 2px;
+    /* padding-top: 6px; */
+    /* top: 2px; */
 }
 
 .header {
@@ -54,9 +54,9 @@
 .header__title {
     font-weight: 700;
     font-size: 24px;
-    padding-left: 20px;
     margin-right: auto;
     word-break: break-all;
+    /* max-width: 500px; */
 }
 
 .header__tabs {
@@ -116,9 +116,9 @@
 }
 
 .questions {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
     gap: 12px;
     margin-top: 24px;
 }
@@ -215,13 +215,13 @@
 
 .users {
     width: 100%;
-    background-color: #fff;
+    /* background-color: #fff; */
     border-radius: 4px;
     margin-top: 24px;
     /* padding: 8px; */
 }
 
-.users th {
+/* .users th {
     padding-bottom: 8px;
     padding-top: 8px;
     font-weight: 600;
@@ -249,4 +249,9 @@
 
 .users tbody td:first-child {
     padding-left: 8px;
+} */
+
+.soon {
+    text-align: center;
+    color: var(--white);
 }
