@@ -2,7 +2,6 @@ const express = require('express');
 const path = require('path');
 
 const { getByPin, getByUrlId } = require('./helpers/getData');
-const formatDate = require('./helpers/formatDate');
 const regexes = require('./consts');
 
 const app = express();
@@ -31,10 +30,7 @@ app.get('/game', async (req, res) => {
 
     data.then(
         (data) => {
-            res.render('game', { 
-                ...data,
-                formatDate
-            });
+            res.render('game', data);
         },
         (err) => {
             res.status(400).json({ error: `${type} is not found` });
