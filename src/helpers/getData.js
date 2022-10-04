@@ -5,7 +5,7 @@ function parseData(challenge) {
     return {
         pin: challenge.pin,
         urlId: challenge.challengeId,
-        challengeId: challenge.quizId,
+        challengeId: challenge.quizMaster.uuid,
         startTime: challenge.startTime,
         endTime: challenge.endTime,
         randomizeAnswers: challenge.game_options.randomize_answers,

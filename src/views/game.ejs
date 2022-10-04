@@ -25,18 +25,17 @@
                     ><%= creator.username %>
                 </a>
             </div>
-            <div class="info__pin">Pin: <%= pin %></div>
-            <div class="info__id">Challenge id: <%= challengeId %></div>
-            <div class="info__id">
-                Url id: <%= challengeId %>_<%= startTime %>
+            <div>Pin: <span id="pin"><%= pin %></span></div>
+            <div>Challenge id: <%= challengeId %></div>
+            <div>
+                Url id:
+                <span id="urlId"><%= challengeId %>_<%= startTime %></span>
             </div>
-            <div class="info__created">
-                Created: <%= formatDate(startTime) %>
+            <div>
+                Created: <span class="format-date"><%= startTime %></span>
             </div>
-            <div class="info__ending">Ending: <%= formatDate(endTime) %></div>
-            <div class="info__randomize">
-                Randomize answers: <%= randomizeAnswers %>
-            </div>
+            <div>Ending: <span class="format-date"><%= endTime %></span></div>
+            <div>Randomize answers: <%= randomizeAnswers %></div>
         </div>
     </div>
 

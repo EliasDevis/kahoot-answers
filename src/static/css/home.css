@@ -1,12 +1,13 @@
 body {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* gap: 32px; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* overflow: hidden; */
+    overflow-x: hidden;
     width: 100vw;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 .enter-id {
@@ -14,6 +15,7 @@ body {
     flex-direction: column;
     padding: 16px;
     gap: 16px;
+    margin: 0 auto;
     border-radius: 4px;
     box-shadow: #00000026 0px 2px 4px;
     width: 300px;
@@ -84,6 +86,10 @@ body {
     width: 200px;
     position: relative;
     z-index: 999;
+    margin: 0 auto;
+    display: block;
+    margin-top: 96px;
+    margin-bottom: 24px;
 }
 
 .rect,
@@ -105,4 +111,40 @@ body {
     border-radius: 50%;
     bottom: -15vmin;
     right: -15vmin;
+}
+
+.challenges {
+    background-color: var(--white);
+    border-radius: 4px;
+    width: 320px;
+    position: relative;
+    z-index: 999;
+    margin: 0 auto;
+    margin-top: 24px;
+}
+
+.challenges summary {
+    padding: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #333;
+}
+
+.challenges__list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.challenge {
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 4px;
+    color: #333;
+}
+
+.challenge:hover {
+    background-color: #dadada;
 }
