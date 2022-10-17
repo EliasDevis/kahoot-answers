@@ -40,7 +40,7 @@
     </div>
 
     <div class="questions" id="questions">
-        <% questions.forEach(question => { %>
+        <% questions.forEach((question, i) => { %>
         <div class="question">
             <div class="question__info">
                 <% if (question.imageUrl) { %>
@@ -51,7 +51,9 @@
                 />
                 <% } %>
 
-                <div class="question__text"><%= question.question %></div>
+                <div class="question__text">
+                    <%= i + 1 %>. <%= question.question %>
+                </div>
                 <div class="question__time"><%= question.time / 1000 %></div>
             </div>
             <div class="question__answers">

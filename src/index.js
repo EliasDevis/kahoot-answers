@@ -28,6 +28,8 @@ app.get('/game', async (req, res) => {
     if (type === 'urlId') data = getByUrlId(id);
     else data = getByPin(id);
 
+    
+
     data.then(
         (data) => {
             res.render('game', data);

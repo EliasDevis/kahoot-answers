@@ -3,7 +3,7 @@
 
 <img src="src/static/images/banner.png" height="300"/>
 
-Link: **https://khanswers.vercel.app**
+Live: **https://khanswers.vercel.app**
 
 It just sends get request to the one of API urls below and formats json response in html code. You can enter pin, id and any of gui urls. It can't be traced by your teacher and works for all quizes. 
 
@@ -11,8 +11,12 @@ PS: Code isn't really great, pull requests would be welcome
 
 ## TODO ## 
 - [ ] Users block
+- [ ] Log uuids and ip
+- [ ] Language changer
 - [ ] About info
-- [ ] Support of question and answer styling
+- [ ] Support question and answer styling
+- [ ] Autotests
+- [ ] Custom domain
 
 ## Test kahoot quiz ##
 Pin: 04442638  
